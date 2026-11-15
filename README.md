@@ -11,7 +11,7 @@
 
 ## Current Functionality
 
-A non-functioning *Jeopardy!* board imitation.
+A non-functioning *Jeopardy!* board & scoreboard imitation.
 
 ## Planned Functionality
 
@@ -35,6 +35,8 @@ A fairly accurate copy of *Jeopardy!* adapted for a classroom setting with teams
 
 ## Usage
 
+Please use your device's terminal to run the application
+
 ### Make sure you have Git installed to run the program
 
 Install Git at: <https://git-scm.com/install/source>
@@ -48,18 +50,22 @@ Install Git at: <https://git-scm.com/install/source>
 
 #### 2. Create and activate a virtual environment (optional, but recommended)
 
-##### *If on Mac or Linux*
+##### Windows (Command Prompt)
 
   ```bash
-  python -m venv venv
-  source venv/bin/activate
+  venv\Scripts\activate.bat
   ```
 
-##### *If on Windows*
+##### Windows (PowerShell)
 
   ```bash
-  python -m venv venv
-  source venv\Scripts\activate
+  .\venv\Scripts\Activate.ps1
+  ```
+
+##### Linux/macOS
+
+  ```bash
+  source venv/bin/activate
   ```
 
 ### 3. Install the required dependencies
