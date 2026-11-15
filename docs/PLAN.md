@@ -12,8 +12,8 @@
 - [/] Create header
 - [/] Add a grid
 - [/] Put in numberings
-- [ ] Create team scores window
-- [ ] Add the teams & placeholder scores
+- [/] Create team scores window
+- [/] Add the teams & placeholder scores
 
 ### Logic
 
