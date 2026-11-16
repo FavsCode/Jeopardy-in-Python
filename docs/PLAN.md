@@ -17,7 +17,7 @@
 
 ### Logic
 
-- [ ] Make button logic (redirect to an empty screen for now)
+- [/] Make button logic (redirect to an empty screen for now)
 - [ ] Make an exit button ;)
 - [ ] Track score incrementation
 - [ ] Add the ability to choose an amount of teams (2 or 3)

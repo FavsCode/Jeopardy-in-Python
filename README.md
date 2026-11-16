@@ -11,7 +11,7 @@
 
 ## Current Functionality
 
-A non-functioning *Jeopardy!* board & scoreboard imitation.
+A functioning *Jeopardy!* board with no questions along with a static scoreboard.
 
 ## Planned Functionality
 
@@ -74,6 +74,12 @@ Install Git at: <https://git-scm.com/install/source>
   pip install -r requirements.txt
   ```
 
+### 4. Run the program
+
+  ```bash
+  python main.py
+  ```
+
 ## Project Structure
 
 ```bash
@@ -82,7 +88,9 @@ Jeopardy!/
 ├── docs/
 │   └── PLAN.md         # Project definition and checklist
 │
-├── gui.py              # The main graphics of the program              
+├── .gitignore          # Ignoring cache or extra files in the push
+├── gui.py              # The graphics of the program     
+├── main.py             # The main entry point of the program         
 ├── README.md           # The project description and overview
 └── requirements.txt    # The project installation requirements to run
 
