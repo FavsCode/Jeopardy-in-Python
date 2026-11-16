@@ -2,7 +2,7 @@
 
 *Jeopardy!* in Python is exactly what it sounds like. The popular American game show, *Jeopardy!*, made for custom-playthroughs in Python! This project is targeted mostly towards classroom settings, but it can also be used in casual, work, and family environments for a shot at the game of *Jeopardy!* without all of the extra knowledge.
 
-**V0.5.1.**
+**V0.5.2.**
 
 ## Tech Stack
 
@@ -68,13 +68,13 @@ Install Git at: <https://git-scm.com/install/source>
   source venv/bin/activate
   ```
 
-### 3. Install the required dependencies
+#### 3. Install the required dependencies
 
   ```bash
   pip install -r requirements.txt
   ```
 
-### 4. Run the program
+#### 4. Run the program
 
   ```bash
   python main.py
