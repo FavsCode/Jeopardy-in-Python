@@ -18,9 +18,9 @@
 ### Logic
 
 - [/] Make button logic (redirect to an empty screen for now)
-- [ ] Make an exit button ;)
-- [ ] Track score incrementation
-- [ ] Add the ability to choose an amount of teams (2 or 3)
+- [/] Make an exit button ;)
+- [/] Track score incrementation
+- [/] Add the ability to choose an amount of teams (2 to 6)
 - [ ] Add turn-based logic
 - [ ] Add a sensor to end the program for a cleared board
 - [ ] Add a winner calculator (very easy)

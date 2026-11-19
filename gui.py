@@ -1,8 +1,9 @@
 """gui.py - The graphics generation of Jeopardy! in Python."""
+
 import tkinter as tk
 
 
-def open_scoreboard() -> None:
+def open_scoreboard(teams) -> None:
     """A function to open the scoreboard of Jeopardy!"""
     # Create a secondary window linked to the main root window
 
@@ -18,41 +19,68 @@ def open_scoreboard() -> None:
         for column in range(3):
             scoreboard.columnconfigure(column, weight=1)
             if row == 0:
+                bg = "#060ce9"
+                fg = "#E5E5E5"
+                if row + 1 + column > teams:
+                    bg = "#3c3fb3"
+                    fg = "#C2C2C2"
+
                 label = tk.Label(
                     scoreboard,
-                    background="#060ce9",
+                    background=bg,
                     borderwidth=4,
                     relief="solid",
                     font=("Bahnschrift SemiBold Condensed", 35, "bold"),
-                    fg="#E5E5E5",
+                    fg=fg,
                     text=f"Team {row + 1 + column}\n0",  # So row 0, column one would be is 2
                 )
             else:
+                bg = "#060ce9"
+                fg = "#E5E5E5"
+                if row + 1 + column + 2 > teams:
+                    bg = "#3c3fb3"
+                    fg = "#C6CBD0"
+
                 label = tk.Label(
                     scoreboard,
-                    background="#060ce9",
+                    background=bg,
                     borderwidth=4,
                     relief="solid",
                     font=("Bahnschrift SemiBold Condensed", 35, "bold"),
-                    fg="#E5E5E5",
+                    fg=fg,
                     text=f"Team {row + 1 + column + 2}\n0",  # So row 1, column one would be is 5
                 )
-    
+
             label.grid(row=row, column=column, sticky="nsew")
 
-def open_question(row, column) -> None:
-    '''A function to open questions after button clicks.'''
+
+def open_question(row: int, column: int) -> None:
+    """A function to open questions after button clicks and increment the score accordingly."""
+    global score
     # Disable the button after use
     buttons[(row, column)].config(state=tk.DISABLED)
+    score += int(buttons[(row, column)].cget("text").strip("$"))
     question = tk.Toplevel(root)
 
     question.title("QUESTION")
     question.configure(background="#060ce9")
-    question.state('zoomed')
+    question.state("zoomed")
 
-    
+    exit_button = tk.Button(
+        question,
+        command=question.destroy,
+        background="#060ce9",
+        borderwidth=2,
+        relief="solid",
+        font=("Candara", 35),
+        fg="#E1B530",
+        text="Exit",
+    )
+    exit_button.pack(side="bottom", anchor="e", ipadx=15)
+
+
 root = tk.Tk()
-
+score = 0
 # Setting the main window properties
 
 root.title("Jeopardy! in Python")
@@ -87,7 +115,7 @@ for row in range(1, 6):  # Starting on row 1! (0, 1, 2...)
     for column in range(6):
         button = tk.Button(
             root,
-            command = lambda r=row, c=column :open_question(r, c),
+            command=lambda r=row, c=column: open_question(r, c),
             background="#060ce9",
             padx=0,
             pady=0,
@@ -98,4 +126,4 @@ for row in range(1, 6):  # Starting on row 1! (0, 1, 2...)
             text=f"${(row) * 200}",  # So row 0 is $200 and so on...
         )
         buttons[(row, column)] = button
-        button.grid(row=row, column=column, sticky='nsew')
+        button.grid(row=row, column=column, sticky="nsew")

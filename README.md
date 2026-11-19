@@ -2,7 +2,7 @@
 
 *Jeopardy!* in Python is exactly what it sounds like. The popular American game show, *Jeopardy!*, made for custom-playthroughs in Python! This project is targeted mostly towards classroom settings, but it can also be used in casual, work, and family environments for a shot at the game of *Jeopardy!* without all of the extra knowledge.
 
-**V0.5.1.**
+**V0.6.0.**
 
 ## Tech Stack
 
@@ -11,7 +11,7 @@
 
 ## Current Functionality
 
-A functioning *Jeopardy!* board with no questions along with a static scoreboard.
+A functioning *Jeopardy!* board with no questions, a static scoreboard, and team-selection logic.
 
 ## Planned Functionality
 
