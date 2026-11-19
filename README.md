@@ -68,13 +68,13 @@ Install Git at: <https://git-scm.com/install/source>
   source venv/bin/activate
   ```
 
-### 3. Install the required dependencies
+#### 3. Install the required dependencies
 
   ```bash
   pip install -r requirements.txt
   ```
 
-### 4. Run the program
+#### 4. Run the program
 
   ```bash
   python main.py
